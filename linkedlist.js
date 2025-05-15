@@ -95,14 +95,10 @@ class linkedList {
     
 }
 list = new linkedList();
-list.printLinkedList();
-list.addNodeAsHead(12);
-list.printLinkedList();
-list.addNodeAstail(99);
-list.printLinkedList();
-list.addNodeAfter(12, 27);
-list.printLinkedList();
-list.addNodeAfter(27,37);
-list.printLinkedList();
-list.deleteNode(27);
-list.printLinkedList();
+list.printLinkedList();//LinkedList is empty !
+list.addNodeAsHead(12);//node { val: 12, next: null } ->
+list.addNodeAstail(99);//Linkedlist :node { val: 12, next: node { val: 99, next: null } } ->node { val: 99, next: null } ->
+list.addNodeAfter(12, 27);//Linkedlist :node {  val: 12,  next: node { val: 27, next: node { val: 99, next: null } }} ->node { val: 27, next: node { val: 99, next: null } } ->node { val: 99, next: null } ->
+list.addNodeAfter(27,37);//Linkedlist :node {  val: 12,  next: node { val: 27, next: node { val: 37, next: [node] } }} ->node {  val: 27,  next: node { val: 37, next: node { val: 99, next: null } }->node { val: 37, next: node { val: 99, next: null } } ->node { val: 99, next: null } ->
+list.deleteNode(27);//Node 27 deleted successfully
+list.printLinkedList();//Linkedlist :node { val: 12,  next: node { val: 37, next: node { val: 99, next: null } }} ->node { val: 37, next: node { val: 99, next: null } } ->node { val: 99, next: null } ->
